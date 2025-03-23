@@ -1,0 +1,67 @@
+[gd_scene load_steps=8 format=3 uid="uid://cyxn1pr2grvlf"]
+
+[ext_resource type="Script" path="res://scripts/main_menu.gd" id="1_vp58q"]
+[ext_resource type="AudioStream" uid="uid://bgtfkcxjo1beg" path="res://resources/bgm_action_5.mp3" id="2_v13do"]
+[ext_resource type="FontFile" uid="uid://cogcnrchifepv" path="res://resources/font_header.ttf" id="3_2qykm"]
+[ext_resource type="Texture2D" uid="uid://bfdd4myrv54dm" path="res://resources/GameBg.png" id="3_4bbb1"]
+[ext_resource type="Texture2D" uid="uid://ttfo4ken338" path="res://resources/btn_start.png" id="4_dt2em"]
+[ext_resource type="Texture2D" uid="uid://ds2spnx57n4ml" path="res://resources/btn_leaderboards.png" id="5_b5em3"]
+[ext_resource type="Texture2D" uid="uid://fxo66mko1yof" path="res://resources/btn_quit.png" id="6_3pjfa"]
+
+[node name="Control" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_vp58q")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(579.5, 327)
+scale = Vector2(0.604688, 0.6)
+texture = ExtResource("3_4bbb1")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -57.5
+offset_top = -64.0
+offset_right = 57.5
+offset_bottom = 64.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = 10
+
+[node name="Label" type="Label" parent="VBoxContainer"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("3_2qykm")
+theme_override_font_sizes/font_size = 50
+text = "GAME CATCHER"
+
+[node name="StartButton" type="TextureButton" parent="VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+texture_normal = ExtResource("4_dt2em")
+
+[node name="LeaderboardsButton" type="TextureButton" parent="VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+texture_normal = ExtResource("5_b5em3")
+
+[node name="QuitButton" type="TextureButton" parent="VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+texture_normal = ExtResource("6_3pjfa")
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("2_v13do")
+autoplay = true
+
+[connection signal="pressed" from="VBoxContainer/StartButton" to="." method="_on_start_pressed"]
+[connection signal="pressed" from="VBoxContainer/LeaderboardsButton" to="." method="_on_leaderboard_pressed"]
+[connection signal="pressed" from="VBoxContainer/QuitButton" to="." method="_on_quit_pressed"]

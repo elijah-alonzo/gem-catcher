@@ -1,0 +1,25 @@
+[gd_scene load_steps=5 format=3 uid="uid://g3ravb462pnu"]
+
+[ext_resource type="Script" path="res://scripts/gem.gd" id="1_i6wk0"]
+[ext_resource type="Texture2D" uid="uid://d1jrywysw2yrm" path="res://resources/element_red_diamond.png" id="2_yv8ev"]
+[ext_resource type="AudioStream" uid="uid://bce61exhu2u17" path="res://resources/spell1_0.wav" id="3_uuoa8"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_omdn5"]
+size = Vector2(36.0123, 35.8946)
+
+[node name="Area2D" type="Area2D"]
+collision_layer = 2
+script = ExtResource("1_i6wk0")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("2_yv8ev")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0.441715, 0.0895346)
+rotation = 2.33176
+shape = SubResource("RectangleShape2D_omdn5")
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("3_uuoa8")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]

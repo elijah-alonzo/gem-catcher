@@ -1,0 +1,60 @@
+[gd_scene load_steps=7 format=3 uid="uid://dp0vp2bo1gf41"]
+
+[ext_resource type="Script" path="res://scripts/game_over.gd" id="1_y6sqk"]
+[ext_resource type="Texture2D" uid="uid://bfdd4myrv54dm" path="res://resources/GameBg.png" id="2_p4joq"]
+[ext_resource type="FontFile" uid="uid://cogcnrchifepv" path="res://resources/font_header.ttf" id="3_6hcuh"]
+[ext_resource type="Texture2D" uid="uid://rtn8tm3lxh15" path="res://resources/btn_restart.png" id="4_2k47n"]
+[ext_resource type="FontFile" uid="uid://cwf8r47knkcfy" path="res://resources/font_body.ttf" id="4_ny81t"]
+[ext_resource type="Texture2D" uid="uid://b8ofe0fa6olkb" path="res://resources/btn_mainmenu.png" id="5_mgm3f"]
+
+[node name="Control" type="Control"]
+layout_mode = 3
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_y6sqk")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(1, -4)
+scale = Vector2(0.604688, 0.6)
+texture = ExtResource("2_p4joq")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -48.0
+offset_top = -60.0
+offset_right = 48.0
+offset_bottom = 60.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = 10
+
+[node name="Label" type="Label" parent="VBoxContainer"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("3_6hcuh")
+theme_override_font_sizes/font_size = 40
+text = "GAME OVER"
+
+[node name="Label2" type="Label" parent="VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_fonts/font = ExtResource("4_ny81t")
+
+[node name="Button" type="TextureButton" parent="VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+texture_normal = ExtResource("4_2k47n")
+
+[node name="Button2" type="TextureButton" parent="VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+texture_normal = ExtResource("5_mgm3f")

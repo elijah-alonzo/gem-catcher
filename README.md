@@ -1,4 +1,4 @@
-# 💎 Gem Catcher 🚀
+# Gem Catcher
 
 ## Simple Arcade Action Built with Godot
 
@@ -8,7 +8,7 @@ The core objective is simple: use a movable paddle to catch valuable falling gem
 
 ---
 
-## 🌟 Features
+## Features
 
 - **Arcade-Style Gameplay:** Simple controls and immediate action optimized for quick sessions.  
 - **Gem Collection:** Catch different types of falling gems to earn varying point values.  
@@ -18,12 +18,12 @@ The core objective is simple: use a movable paddle to catch valuable falling gem
 
 ---
 
-## ▶️ How to Play
+## How to Play
 
 - **Movement:** Use the **Left/Right Arrow Keys** or **A/D** to move the paddle horizontally.  
-- **Objective:** Catch the falling **gems** (brightly colored items) with your paddle.  
+- **Objective:** Catch the falling **gems** with your paddle.  
 - **Scoring:** Each gem caught increases your score.  
-- **Hazards:** Avoid non-gem falling objects (e.g., rocks or bombs) — these may end the game or reduce points.  
+- **Hazards:** Avoid non-gem falling objects these may end the game or reduce points.  
 - **Survival:** Stay alive as difficulty increases and aim for the highest score possible!
 
 ---
